@@ -1,11 +1,15 @@
 const { ContainerBuilder, TextDisplayBuilder, SectionBuilder, ThumbnailBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, MessageFlags } = require('discord.js')
 
-const brandColor = 0x2b2d31
-const successColor = 0x57f287
-const errorColor = 0xed4245
+// New vibrant color scheme
+const brandColor = 0x5865F2      // Discord Blurple
+const successColor = 0x00FF41     // Neon Green
+const errorColor = 0xFF4365       // Hot Pink/Red
+const warningColor = 0xFFB81C     // Vibrant Orange
 
 function buildContainer(color, title, description, linkButton, thumbnailUrl) {
     const container = new ContainerBuilder().setAccentColor(color)
+    
+    // Enhanced text with more styling
     const text = new TextDisplayBuilder().setContent(`**${title}**\n${description}`)
 
     if (thumbnailUrl) {
@@ -43,6 +47,10 @@ function infoContainer(title, description, linkButton) {
     return buildContainer(brandColor, title, description, linkButton)
 }
 
+function warningContainer(title, description, linkButton) {
+    return buildContainer(warningColor, title, description, linkButton)
+}
+
 function plainContainer(content) {
     return new ContainerBuilder()
         .setAccentColor(brandColor)
@@ -51,4 +59,4 @@ function plainContainer(content) {
         )
 }
 
-module.exports = { successContainer, errorContainer, infoContainer, plainContainer, ComponentsV2Flags: MessageFlags.IsComponentsV2 }
+module.exports = { successContainer, errorContainer, infoContainer, warningContainer, plainContainer, ComponentsV2Flags: MessageFlags.IsComponentsV2 }
