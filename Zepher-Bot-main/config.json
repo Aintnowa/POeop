@@ -1,0 +1,9 @@
+{
+  "token": "MTUyMDUwMjM1MDA2NDY0ODM4Mg.G1AaIP.ZwVMgkq6KX1SSnqQMA4w2oMUKaqHlfjI-7um2Y",
+  "applicationId": "1520502350064648382",
+  "mongodbUri": "mongodb://OPt1kMonkey:OPt1kMonkey@ac-0ed7fc3-shard-00-00.gh0a3jm.mongodb.net:27017,ac-0ed7fc3-shard-00-01.gh0a3jm.mongodb.net:27017,ac-0ed7fc3-shard-00-02.gh0a3jm.mongodb.net:27017/?ssl=true&replicaSet=atlas-n61nm7-shard-0&authSource=admin&appName=Cluster0",
+"logChannelId": "",
+    "purgeChannelIds": [
+        ""
+    ]
+}
