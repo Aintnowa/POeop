@@ -45,10 +45,10 @@ module.exports = {
             .setRequired(true))
         .addIntegerOption((option) => option
             .setName('loops')
-            .setDescription('Number of loops (1-5)')
+            .setDescription('Number of loops (1-20)')
             .setRequired(true)
             .setMinValue(1)
-            .setMaxValue(5)),
+            .setMaxValue(20)),
 
     async execute(interaction) {
         const userId = interaction.user.id
